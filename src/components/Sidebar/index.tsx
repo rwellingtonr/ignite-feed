@@ -1,5 +1,6 @@
 import { PencilLine } from "phosphor-react";
 import * as S from "./styles";
+import { Avatar } from "~/style/Avatar";
 export function Sidebar() {
 	return (
 		<S.Wrapper>
@@ -8,10 +9,7 @@ export function Sidebar() {
 				alt=""
 			/>
 			<S.Profile>
-				<S.ProfilePicture
-					src="https://avatars.githubusercontent.com/u/73858173?v=4"
-					alt=""
-				/>
+				<Avatar src={import.meta.env.VITE_AVATAR} alt="" />
 				<S.ProfileName>Wellington Leardini</S.ProfileName>
 				<S.ProfileJob>Fullstack developer</S.ProfileJob>
 			</S.Profile>

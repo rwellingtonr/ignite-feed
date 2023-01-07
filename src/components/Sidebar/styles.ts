@@ -22,15 +22,6 @@ export const Profile = styled("div", {
 	marginTop: "calc(0px - 1.5rem - 6px)",
 });
 
-export const ProfilePicture = styled("img", {
-	width: "calc(3rem + 12px)",
-	height: "calc(3rem + 12px)",
-	borderRadius: "8px",
-	background: "$gray-100",
-	border: "4px solid $gray-800",
-	outline: "2px solid $green-500",
-});
-
 export const ProfileName = styled("strong", {
 	marginTop: "1rem",
 	color: "$gray-100",
@@ -63,7 +54,7 @@ export const FooterAnchor = styled("a", {
 	alignItems: "center",
 	justifyContent: "center",
 	gap: "0.3rem",
-	transition: "color 0.2s ease-in-out, background 0.2s ease-in-out",
+	transition: "color 0.1s ease-in-out, background 0.1s ease-in-out",
 	"&:hover": {
 		color: "$gray-100",
 		background: "$green-500",
