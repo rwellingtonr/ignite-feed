@@ -9,11 +9,17 @@ export const globalStyles = globalCss({
 	body: {
 		background: "#323238",
 		color: "#c4c4cc",
+		width: "100vw",
+		minHeight: "100vh",
 	},
 	"body, input, select, textarea": {
 		fontFamily: "Hanken Grotesk, sans-serif",
 		fontWeight: 400,
 		fontSize: "1rem",
+	},
+	":focus": {
+		outline: "transparent",
+		boxShadow: "0 0 0 2px #00875f",
 	},
 });
 
@@ -30,6 +36,7 @@ export const { styled, css } = createStitches({
 			"gray-900": "#121214",
 			"green-500": "#00875f",
 			"green-300": "#00b37e",
+			"red-500": "#F75A68",
 		},
 	},
 	media: {
