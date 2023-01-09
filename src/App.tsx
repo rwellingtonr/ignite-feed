@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import { Wrapper } from "./styles";
 import { Post } from "./components/Post";
+import { posts } from "./mocks/posts";
 
 export function App() {
 	globalStyles();
@@ -13,8 +14,9 @@ export function App() {
 			<Wrapper>
 				<Sidebar />
 				<main>
-					<Post />
-					<Post />
+					{posts?.map((post) => (
+						<Post key={post.id} {...post} />
+					))}
 				</main>
 			</Wrapper>
 		</>
