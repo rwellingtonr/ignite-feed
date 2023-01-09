@@ -1,28 +1,5 @@
 import { createStitches, globalCss } from "@stitches/react";
 
-export const globalStyles = globalCss({
-	"*": {
-		margin: 0,
-		padding: 0,
-		boxSize: "border-box",
-	},
-	body: {
-		background: "#323238",
-		color: "#c4c4cc",
-		width: "100vw",
-		minHeight: "100vh",
-	},
-	"body, input, select, textarea": {
-		fontFamily: "Hanken Grotesk, sans-serif",
-		fontWeight: 400,
-		fontSize: "1rem",
-	},
-	":focus": {
-		outline: "transparent",
-		boxShadow: "0 0 0 2px #00875f",
-	},
-});
-
 export const { styled, css } = createStitches({
 	theme: {
 		colors: {
@@ -43,5 +20,28 @@ export const { styled, css } = createStitches({
 		bp1: "(min-width: 640px)",
 		bp2: "(min-width: 768px)",
 		bp3: "(min-width: 1024px)",
+	},
+});
+
+export const globalStyles = globalCss({
+	"*": {
+		margin: 0,
+		padding: 0,
+		boxSize: "border-box",
+	},
+	body: {
+		background: "#323238",
+		color: "#c4c4cc",
+		width: "100vw",
+		minHeight: "100vh",
+	},
+	"body, input, select, textarea": {
+		fontFamily: "Hanken Grotesk, sans-serif",
+		fontWeight: 400,
+		fontSize: "1rem",
+	},
+	":focus": {
+		outline: "transparent",
+		boxShadow: "0 0 0 2px #00875f",
 	},
 });

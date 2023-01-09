@@ -1,10 +1,8 @@
-import { styled } from "~/themes/global";
 import * as PostStyle from "./styles";
-import { Avatar } from "~/style/Avatar";
 import { Comment } from "../Comment";
-type PostProps = {};
+import { Avatar } from "../Avatar";
 
-export function Post({}: PostProps) {
+export function Post() {
 	return (
 		<PostStyle.Article>
 			<PostStyle.ArticleHeader>
@@ -35,6 +33,7 @@ export function Post({}: PostProps) {
 			</PostStyle.PostContent>
 			<PostStyle.CommentForm>
 				<PostStyle.CommentTitle>Deixe seu feedback</PostStyle.CommentTitle>
+
 				<PostStyle.TextArea
 					name="commentMessage"
 					id="commentMessage"

@@ -1,10 +1,10 @@
 import * as CommentStyles from "./styles";
-import { styled } from "~/themes/global";
 import { ThumbsUp, Trash } from "phosphor-react";
+import { Avatar } from "../Avatar";
 export function Comment() {
 	return (
 		<CommentStyles.CommentWrapper>
-			<CommentStyles.CommentAvatar src={import.meta.env.VITE_AVATAR} />
+			<Avatar hasBorder={false} src={import.meta.env.VITE_AVATAR} />
 
 			<CommentStyles.CommentBox>
 				<CommentStyles.CommentContent>

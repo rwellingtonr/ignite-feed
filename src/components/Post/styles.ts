@@ -3,8 +3,7 @@ import { styled } from "~/themes/global";
 export const Article = styled("article", {
 	background: "$gray-800",
 	borderRadius: "8px",
-	width: "100%",
-	padding: "20px",
+	padding: "2.5rem",
 
 	"& + article": {
 		marginTop: "2rem",
@@ -86,11 +85,12 @@ export const TextArea = styled("textarea", {
 	border: 0,
 	resize: "none",
 	height: "6rem",
-	padding: "1rem 0",
-	borderRadius: "8px",
+	padding: "1rem",
+	borderRadius: "0.5rem",
 	color: "$gray-100",
 	lineHeight: 1.4,
 	marginTop: "1rem",
+	boxSizing: "border-box",
 });
 
 export const CommentButton = styled("button", {

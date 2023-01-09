@@ -1,6 +1,7 @@
 import { PencilLine } from "phosphor-react";
 import * as S from "./styles";
-import { Avatar } from "~/style/Avatar";
+import { Avatar } from "../Avatar";
+
 export function Sidebar() {
 	return (
 		<S.Wrapper>

@@ -4,9 +4,12 @@ export const Wrapper = styled("div", {
 	backgroundColor: "$gray-800",
 	borderRadius: "8px",
 	overflow: "hidden",
-	display: "none",
-	"@bp2": {
-		display: "block",
+	visibility: "hidden",
+	maxHeight: 0,
+
+	"@bp1": {
+		visibility: "visible",
+		maxHeight: "none",
 	},
 });
 

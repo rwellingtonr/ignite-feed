@@ -9,12 +9,7 @@ export const CommentWrapper = styled("div", {
 export const CommentBox = styled("div", {
 	flex: 1,
 });
-export const CommentAvatar = styled("img", {
-	width: "3rem",
-	height: "3rem",
-	borderRadius: "8px",
-	background: "$gray-100",
-});
+
 export const CommentContent = styled("main", {
 	background: "$gray-700",
 	padding: "1rem",
