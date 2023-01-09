@@ -12,10 +12,10 @@ export function App() {
 			<Header />
 			<Wrapper>
 				<Sidebar />
-				<div>
+				<main>
 					<Post />
 					<Post />
-				</div>
+				</main>
 			</Wrapper>
 		</>
 	);
