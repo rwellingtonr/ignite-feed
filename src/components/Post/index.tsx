@@ -1,6 +1,7 @@
 import { styled } from "~/themes/global";
 import * as PostStyle from "./styles";
 import { Avatar } from "~/style/Avatar";
+import { Comment } from "../Comment";
 type PostProps = {};
 
 export function Post({}: PostProps) {
@@ -37,10 +38,19 @@ export function Post({}: PostProps) {
 				<PostStyle.TextArea
 					name="commentMessage"
 					id="commentMessage"
-					placeholder="Deixe um comentario"
+					placeholder="Deixe um comentário"
 				/>
-				<PostStyle.CommentButton type="submit">Comentar</PostStyle.CommentButton>
+
+				<PostStyle.Footer>
+					<PostStyle.CommentButton type="submit">Publicar</PostStyle.CommentButton>
+				</PostStyle.Footer>
 			</PostStyle.CommentForm>
+
+			<PostStyle.CommentList>
+				<Comment />
+				<Comment />
+				<Comment />
+			</PostStyle.CommentList>
 		</PostStyle.Article>
 	);
 }

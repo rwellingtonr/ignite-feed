@@ -3,6 +3,7 @@ import { styled } from "~/themes/global";
 export const Article = styled("article", {
 	background: "$gray-800",
 	borderRadius: "8px",
+	width: "100%",
 	padding: "20px",
 
 	"& + article": {
@@ -58,28 +59,40 @@ export const AuthorJobTitle = styled("span", {
 	color: "$gray-400",
 	lineHeight: 1.6,
 });
+export const Footer = styled("footer", {
+	visibility: "hidden",
+	maxHeight: 0,
+});
+
 export const CommentForm = styled("form", {
 	width: "100%",
 	marginTop: "1.5rem",
 	paddingTop: "1.5rem",
 	borderTop: "1px solid $gray-600",
+
+	[`&:focus-within ${Footer}`]: {
+		visibility: "visible",
+		maxHeight: "none",
+	},
 });
 export const CommentTitle = styled("strong", {
 	lineHeight: 1.6,
 	color: "$gray-100",
 });
+
 export const TextArea = styled("textarea", {
 	width: "100%",
 	backgroundColor: "$gray-900",
 	border: 0,
 	resize: "none",
 	height: "6rem",
-	padding: "1rem",
+	padding: "1rem 0",
 	borderRadius: "8px",
 	color: "$gray-100",
 	lineHeight: 1.4,
 	marginTop: "1rem",
 });
+
 export const CommentButton = styled("button", {
 	padding: "1rem 1.5rem",
 	marginTop: "1rem",
@@ -90,7 +103,12 @@ export const CommentButton = styled("button", {
 	color: "$white",
 	cursor: "pointer",
 	transition: "background 0.1s linear",
+
 	"&:hover": {
 		background: "$green-300",
 	},
+});
+
+export const CommentList = styled("div", {
+	marginTop: "3rem",
 });
