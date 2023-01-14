@@ -1,7 +1,17 @@
 import * as CommentStyles from "./styles";
+import { useState } from "react";
 import { ThumbsUp, Trash } from "phosphor-react";
 import { Avatar } from "../Avatar";
-export function Comment() {
+
+type CommentProps = {
+	content: string;
+	id: number;
+	handleDeleteComment: (index: number) => void;
+};
+
+export function Comment({ content, handleDeleteComment, id }: CommentProps) {
+	const [likeCount, setLikeCount] = useState(0);
+
 	return (
 		<CommentStyles.CommentWrapper>
 			<Avatar hasBorder={false} src={import.meta.env.VITE_AVATAR} />
@@ -20,20 +30,24 @@ export function Comment() {
 							</CommentStyles.CommentTime>
 						</div>
 
-						<CommentStyles.DeleteComment title="Realiza a remoção do comentário">
+						<CommentStyles.DeleteCommentButton
+							type="button"
+							onClick={() => handleDeleteComment(id)}
+							title="Realiza a remoção do comentário">
 							<Trash size={24} />
-						</CommentStyles.DeleteComment>
+						</CommentStyles.DeleteCommentButton>
 					</CommentStyles.CommentContentHeader>
 
-					<CommentStyles.CommentContentText>
-						Muito bom John, parabéns!!
-					</CommentStyles.CommentContentText>
+					<CommentStyles.CommentContentText>{content}</CommentStyles.CommentContentText>
 				</CommentStyles.CommentContent>
 
 				<CommentStyles.CommentFooter>
-					<CommentStyles.ThumbsButton>
+					<CommentStyles.ThumbsButton
+						type="button"
+						id="addLikes"
+						onClick={() => setLikeCount((prev) => prev + 1)}>
 						<ThumbsUp size={20} />
-						Aplaudir <CommentStyles.Likes>20</CommentStyles.Likes>
+						Aplaudir <CommentStyles.Likes>{likeCount}</CommentStyles.Likes>
 					</CommentStyles.ThumbsButton>
 				</CommentStyles.CommentFooter>
 			</CommentStyles.CommentBox>

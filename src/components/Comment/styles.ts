@@ -31,7 +31,7 @@ export const CommentContentText = styled("p", {
 	marginTop: "1rem",
 	color: "$gray-300",
 });
-export const DeleteComment = styled("button", {
+export const DeleteCommentButton = styled("button", {
 	backgroundColor: "transparent",
 	color: "$gray-400",
 	border: 0,

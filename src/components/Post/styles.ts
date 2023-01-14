@@ -104,8 +104,12 @@ export const CommentButton = styled("button", {
 	cursor: "pointer",
 	transition: "background 0.1s linear",
 
-	"&:hover": {
+	"&:not(:disabled):hover": {
 		background: "$green-300",
+	},
+	"&:disabled": {
+		opacity: 0.7,
+		cursor: "not-allowed",
 	},
 });
 
